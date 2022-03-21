@@ -14,7 +14,7 @@ if [ ! -e "pretrained_models/" ]; then
     fi
     echo -e "${RED}Downloading pre-trained model${NC}"
 
-    wget --quiet https://zenodo.org/record/6369772/files/pretrained_models.tar.gz?download=1
+    wget --quiet https://zenodo.org/record/6369772/files/pretrained_models.tar.gz
     tar -xzvf pretrained_models.tar.gz
 fi
 
@@ -22,6 +22,7 @@ fi
 
 #download aishell3 wavs and anonymized speaker vectors
 if [ ! -e "data/aishell3" ]; then
+    mkdir -p data
     cd data
     if [ -f aishell3.tar.gz ];
     then
@@ -29,7 +30,7 @@ if [ ! -e "data/aishell3" ]; then
     fi
     echo -e "${RED}Downloading alshell3 wavs and anonymized speaker vectors${NC}"
 
-    wget --quiet https://zenodo.org/record/6371728/files/aishell3.tar.gz?download=1
+    wget --quiet https://zenodo.org/record/6371728/files/aishell3.tar.gz
     tar -xzvf aishell3.tar.gz
     cd ../
 fi
@@ -89,7 +90,7 @@ if [ ! -e "data/multi_language/" ];then
     fi
     echo -e "${RED}Download multilingual training data${NC}"
 
-    wget --quiet
+    #wget 
     tar -xzvf multi_language.tar.gz
     cd ../
 fi
