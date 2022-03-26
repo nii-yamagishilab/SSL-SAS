@@ -180,7 +180,7 @@ if __name__ == "__main__":
     with open(params_file) as fin:
         params = load_hyperpyyaml(fin, overrides)
 
-    veri_file_path = "/home/smg/miao/data/aishell/generate_trial/veri_test.lst"
+    veri_file_path = "scp/veri_test.lst"
 
     from asv_data_prepare import prepare_data  # noqa E402
 
