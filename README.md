@@ -16,7 +16,7 @@ Please cite these papers if you use this code.
 
 `bash install.sh`
 
-## Training and inference
+## Training and Inference
 `bash 00_demo.sh`
 
 ## Acknowledgments
