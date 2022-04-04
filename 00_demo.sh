@@ -35,7 +35,7 @@ if [ ! -e "data/aishell3" ]; then
     tar -xzvf aishell3.tar.gz
     cd ../
 fi
-
+<<!
 # try pre-trained model
 if [ -e "data/aishell3/" ];then
   echo -e "${RED}Try pre-trained model${NC}"
@@ -82,7 +82,7 @@ if [ -e "data/aishell3/" ];then
 else
     echo "Cannot find data/aishell3/"
 fi
-
+!
 if [ ! -e "data/multi_language/" ];then
     cd data
     if [ -f multi_language.tar.gz ];
@@ -91,11 +91,17 @@ if [ ! -e "data/multi_language/" ];then
     fi
     echo -e "${RED}Download multilingual training data${NC}"
 
-    wget https://zenodo.org/record/6369670/files/multi_language.tar.gz.partaa
-    wget https://zenodo.org/record/6369670/files/multi_language.tar.gz.partab
-    wget https://zenodo.org/record/6369670/files/multi_language.tar.gz.partac 
-    wget https://zenodo.org/record/6369670/files/multi_language.tar.gz.partad
-    wget https://zenodo.org/record/6369670/files/multi_language.tar.gz.partae
+
+    for part in multi_language.tar.gz.parta{a,b,c,d,e}; do
+	if [-f ${part}]; then
+	   rm ${part}
+	fi
+	
+	wget https://zenodo.org/record/6369670/files/${part}
+	exit_code=$?
+	# if exit code is not 0 (failed), then return it
+	test $exit_code -eq 0 || exit $exit_code
+    done	
     cat multi_language.tar.gz.parta* >multi_language.tar.gz
     tar -xzvf multi_language.tar.gz
     cd ../
