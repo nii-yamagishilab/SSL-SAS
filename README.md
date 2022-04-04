@@ -10,11 +10,11 @@ Audio samples can be found here: https://nii-yamagishilab.github.io/odyssey2022/
 Please cite these papers if you use this code.
 
 ## Dependencies
-`git clone https://github.com/xiaoxiaomiao39/SSL-based-Spekaer-Anonymization.git
+`git clone https://github.com/xiaoxiaomiao39/SSL-based-Spekaer-Anonymization.git`
 
-cd SSL-based-Spekaer-Anonymization
+`cd SSL-based-Spekaer-Anonymization`
 
-bash install.sh`
+`bash install.sh`
 
 ## Training and inference
 `bash 00_demo.sh`
