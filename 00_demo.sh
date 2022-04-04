@@ -35,7 +35,7 @@ if [ ! -e "data/aishell3" ]; then
     tar -xzvf aishell3.tar.gz
     cd ../
 fi
-<<!
+
 # try pre-trained model
 if [ -e "data/aishell3/" ];then
   echo -e "${RED}Try pre-trained model${NC}"
@@ -82,7 +82,7 @@ if [ -e "data/aishell3/" ];then
 else
     echo "Cannot find data/aishell3/"
 fi
-!
+
 if [ ! -e "data/multi_language/" ];then
     cd data
     if [ -f multi_language.tar.gz ];
