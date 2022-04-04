@@ -1,14 +1,12 @@
 ## SSL-based-Spekaer-Anonymization
 This is an implementation of the papers:
->[Language-independent speaker anonymization approach using self-supervised pre-trained models](https://arxiv.org/abs/2202.13097) 
+[Language-independent speaker anonymization approach using self-supervised pre-trained models](https://arxiv.org/abs/2202.13097) 
 
->[Analyzing Language-Independent Speaker Anonymization Framework under Unseen Conditions](https://arxiv.org/abs/2203.14834) 
-
-The authors are Xiaoxiao Miao, Xin Wang, Erica Cooper, Junichi Yamagishi and Natalia Tomashenko. 
-
-Please cite these papers if you use this code.
+[Analyzing Language-Independent Speaker Anonymization Framework under Unseen Conditions](https://arxiv.org/abs/2203.14834) 
 
 Audio samples can be found here: https://nii-yamagishilab.github.io/odyssey2022/
+
+Please cite these papers if you use this code.
 
 ## Dependencies
 `git clone https://github.com/xiaoxiaomiao39/SSL-based-Spekaer-Anonymization.git
