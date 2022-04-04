@@ -14,8 +14,8 @@ Please cite these papers if you use this code.
 
 cd SSL-based-Spekaer-Anonymization
 
-bash install.sh
-`
+bash install.sh`
+
 ## Training and inference
 `bash 00_demo.sh`
 
