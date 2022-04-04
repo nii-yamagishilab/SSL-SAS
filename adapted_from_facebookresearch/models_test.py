@@ -1,4 +1,11 @@
-# adapted from https://github.com/jik876/hifi-gan
+# Copyright (c) Facebook, Inc. and its affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+# This source code was adapted from https://github.com/facebookresearch/speech-resynthesis by Xiaoxiao Miao (NII, Japan).
+
 
 import torch
 import torch.nn.functional as F
@@ -8,7 +15,10 @@ from torch.nn.utils import weight_norm, remove_weight_norm, spectral_norm
 import math
 from utils import init_weights, get_padding, AttrDict
 import fairseq
-from ecapa_tdnn_sb import ECAPA_TDNN
+import sys,os
+sys.path.append(os.getcwd())
+print(os.getcwd())
+from adapted_from_speechbrain.ecapa_tdnn_sb import ECAPA_TDNN
 from collections import OrderedDict
 import readwrite
 import joblib

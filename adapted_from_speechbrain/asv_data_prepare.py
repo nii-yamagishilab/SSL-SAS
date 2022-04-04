@@ -1,9 +1,4 @@
-## adapted from speechbrain
-"""
-Data preparation.
-
-Download: http://www.robots.ox.ac.uk/~vgg/data/voxceleb/
-"""
+# This source code was adapted from speechbrain by Xiaoxiao Miao (NII, Japan).
 
 import os
 import csv

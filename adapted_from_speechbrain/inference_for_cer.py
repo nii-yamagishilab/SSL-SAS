@@ -1,4 +1,4 @@
-#adopted from speechbrain
+# This source code was adapted from speechbrain by Xiaoxiao Miao (NII, Japan).
 import sys,os
 from torch.utils.data.dataset import Dataset
 from torch.utils.data import DataLoader
@@ -47,9 +47,6 @@ class MyDataset(Dataset):
     return output_wavs, lens, wavnames
 
 print('Loading data')
-#wavdir = '/home/smg/miao/speech-re-facebook/unifi_ssl_ecapa_hifigan/exp/libri_tts_clean_100_ssl_xv_ssl_freeze/aishell_test.lst/'
-#testlist = 'scp/test_ssl_xv.lst'
-
 wavdir = sys.argv[1]
 testlist = sys.argv[2]
 outfile_name = testlist.split('/')[-1].split('.')[0]

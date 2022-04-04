@@ -1,4 +1,4 @@
-#adopted from speechbrain
+# This source code was adapted from speechbrain by Xiaoxiao Miao (NII, Japan).
 
 #!/usr/bin/python3
 """Recipe for training a speaker verification system based on cosine distance.
