@@ -5,7 +5,10 @@ This is an implementation of the papers:
 
 [Analyzing Language-Independent Speaker Anonymization Framework under Unseen Conditions](https://arxiv.org/abs/2203.14834) 
 
-The authors are Xiaoxiao Miao, Xin Wang, Erica Cooper, Junichi Yamagishi, Natalia Tomashenko
+The authors are Xiaoxiao Miao, Xin Wang, Erica Cooper, Junichi Yamagishi, Natalia Tomashenko.
+
+
+
 
 Audio samples can be found here: https://nii-yamagishilab.github.io/odyssey2022/
 
