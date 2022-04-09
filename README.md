@@ -19,10 +19,13 @@ Please cite these papers if you use this code.
 
 `cd SSL-SAS`
 
-`bash scripts/install.sh
-source env.sh
-conda install -c conda-forge sox
-conda install -c conda-forge parallel`
+`bash scripts/install.sh`
+
+Make sure sox and parallel are installed. 
+If not: 
+`source env.sh`
+`conda install -c conda-forge sox`
+`conda install -c conda-forge parallel`
 
 ## Training and Inference
 `bash scripts/00_demo.sh`
