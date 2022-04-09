@@ -40,7 +40,7 @@ fi
 # try pre-trained model
 if [ -e "data/aishell3/" ];then
   echo -e "${RED}Try pre-trained model${NC}"
-  ## the setting os the "vector_type = libri and model_type = libri_tts_clean_100_fbank_xv_ssl_freeze" is the implementation of https://arxiv.org/abs/2202.13097 
+  ## the setting: "vector_type = libri and model_type = libri_tts_clean_100_fbank_xv_ssl_freeze" is the implementation of https://arxiv.org/abs/2202.13097 
   ## the rest settings are the implementation of https://arxiv.org/abs/2203.14834
   for vector_type in {libri,mls_10,mand_10}; do
    for model_type in {multilan_fbank_xv_ssl_freeze,libri_tts_clean_100_fbank_xv_ssl_freeze}; do
