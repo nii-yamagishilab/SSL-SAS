@@ -35,7 +35,7 @@ They were created by the [facebookreasearch](https://github.com/facebookresearch
 The `scripts` subfolder has the [MIT license](https://github.com/nii-yamagishilab/SSL-SAS/blob/main/scripts/LICENSE).
 
 Because this source code was adapted from the facebookresearch and speechbrain, the whole project follows  
-the [Attribution-NonCommercial 4.0 International License](https://github.com/nii-yamagishilab/SSL-SAS/blob/main/adapted_from_facebookresearch/LICENSE)
+the [Attribution-NonCommercial 4.0 International License](https://github.com/nii-yamagishilab/SSL-SAS/blob/main/adapted_from_facebookresearch/LICENSE).
 
 Copyright (c) 2022, Yamagishi Laboratory, National Institute of Informatics
 All rights reserved
