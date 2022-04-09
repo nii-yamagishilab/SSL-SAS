@@ -32,7 +32,10 @@ If not:
 `conda install -c conda-forge parallel`
 
 ## Training and Inference
-`bash scripts/00_demo.sh`
+
+`bash scripts/00_prepare.sh`
+
+`bash scripts/01_demo.sh`
 
 ## Acknowledgments
 This study is supported by JST CREST Grants (JPMJCR18A6 and JPMJCR20D3), MEXT KAKENHI Grants (21K17775, 21H04906, 21K11951, 18H04112), and the VoicePersonal project (ANR-18-JSTS-0001)
