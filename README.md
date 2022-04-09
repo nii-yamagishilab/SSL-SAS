@@ -19,7 +19,10 @@ Please cite these papers if you use this code.
 
 `cd SSL-SAS`
 
-`bash scripts/install.sh`
+`bash scripts/install.sh
+source env.sh
+conda install -c conda-forge sox
+conda install -c conda-forge parallel`
 
 ## Training and Inference
 `bash scripts/00_demo.sh`
