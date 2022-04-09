@@ -38,11 +38,11 @@ fi
 
 # try pre-trained model
 if [ -e "data/aishell3/" ];then
-  echo -e "${RED}Try pre-trained model${NC}"
-  #for vector_type in {libri,mls_10,mand_10}; do
-    vector_type=libri #mls_10,mand_10,libri
-    model_type=multilan_fbank_xv_ssl_freeze #multilan_fbank_xv_ssl_freeze,libri_tts_clean_100_fbank_xv_ssl_freeze
-   #for model_type in {multilan_fbank_xv_ssl_freeze,libri_tts_clean_100_fbank_xv_ssl_freeze}; do
+   echo -e "${RED}Try pre-trained model${NC}"
+   for vector_type in {libri,mls_10,mand_10}; do
+    #vector_type=libri #mls_10,mand_10,libri
+    #model_type=multilan_fbank_xv_ssl_freeze #multilan_fbank_xv_ssl_freeze,libri_tts_clean_100_fbank_xv_ssl_freeze
+   for model_type in {multilan_fbank_xv_ssl_freeze,libri_tts_clean_100_fbank_xv_ssl_freeze}; do
     
     for dset in {aishell3_enroll_sep,aishell3_test_sep}; do
 	    python adapted_from_facebookresearch/inference.py --input_test_file scp/aishell3/$dset.lst \
@@ -77,8 +77,8 @@ if [ -e "data/aishell3/" ];then
     python adapted_from_speechbrain/speaker_verification_cosine.py configs/verification_ecapa.yaml \
 	    --enroll_dir=pretrained_models/output/$model_type/aishell3_enroll_sep_${vector_type} \
 	    --test_dir=pretrained_models/output/$model_type/aishell3_test_sep_${vector_type}
-   #done
-  #done
+   done
+  done
 else
     echo "Cannot find data/aishell3/"
 fi
