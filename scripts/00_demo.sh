@@ -7,6 +7,7 @@
 
 source env.sh
 
+<<!
 #download pretrain models
 if [ ! -e "pretrained_models/" ]; then
     if [ -f pretrained_models.tar.gz ];
@@ -15,7 +16,7 @@ if [ ! -e "pretrained_models/" ]; then
     fi
     echo -e "${RED}Downloading pre-trained model${NC}"
 
-    wget https://zenodo.org/record/6369772/files/pretrained_models.tar.gz
+    #wget https://zenodo.org/record/6369772/files/pretrained_models.tar.gz
     tar -xzvf pretrained_models.tar.gz
 fi
 
@@ -82,9 +83,10 @@ if [ -e "data/aishell3/" ];then
 else
     echo "Cannot find data/aishell3/"
 fi
-
+!
 if [ ! -e "data/multi_language/" ];then
     cd data
+    <<!
     if [ -f multi_language.tar.gz ];
     then
         rm multi_language.tar.gz
@@ -103,6 +105,7 @@ if [ ! -e "data/multi_language/" ];then
 	test $exit_code -eq 0 || exit $exit_code
     done	
     cat multi_language.tar.gz.parta* >multi_language.tar.gz
+!
     tar -xzvf multi_language.tar.gz
     cd ../
 fi

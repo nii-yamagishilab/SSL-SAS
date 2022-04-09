@@ -20,7 +20,7 @@ sys.path.append(os.getcwd())
 print(os.getcwd())
 from adapted_from_speechbrain.ecapa_tdnn_sb import ECAPA_TDNN
 from collections import OrderedDict
-import readwrite
+from scripts.readwrite import read_raw_mat
 import joblib
 ## sb libs for pretrained ecapa model
 from speechbrain.lobes.features import Fbank
@@ -363,7 +363,7 @@ class latentGenerator(Generator):
 
             # extract xvector
             # read anon xvector
-            xv = readwrite.read_raw_mat(xv_path, 192)
+            xv = read_raw_mat(xv_path, 192)
             xv = torch.FloatTensor(xv).unsqueeze(0).to(x.device) 
             x = F.layer_norm(x, x.shape)
             xv = F.layer_norm(xv, xv.shape)
