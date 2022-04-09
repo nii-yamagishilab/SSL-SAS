@@ -22,9 +22,13 @@ Please cite these papers if you use this code.
 `bash scripts/install.sh`
 
 Make sure sox and parallel are installed. 
+
 If not: 
+
 `source env.sh`
+
 `conda install -c conda-forge sox`
+
 `conda install -c conda-forge parallel`
 
 ## Training and Inference
