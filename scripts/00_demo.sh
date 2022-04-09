@@ -16,7 +16,7 @@ if [ ! -e "pretrained_models/" ]; then
     fi
     echo -e "${RED}Downloading pre-trained model${NC}"
 
-    #wget https://zenodo.org/record/6369772/files/pretrained_models.tar.gz
+    wget https://zenodo.org/record/6369772/files/pretrained_models.tar.gz
     tar -xzvf pretrained_models.tar.gz
 fi
 
@@ -39,10 +39,10 @@ fi
 
 # try pre-trained model
 if [ -e "data/aishell3/" ];then
-   echo -e "${RED}Try pre-trained model${NC}"
-   for vector_type in {libri,mls_10,mand_10}; do
-    #vector_type=libri #mls_10,mand_10,libri
-    #model_type=multilan_fbank_xv_ssl_freeze #multilan_fbank_xv_ssl_freeze,libri_tts_clean_100_fbank_xv_ssl_freeze
+  echo -e "${RED}Try pre-trained model${NC}"
+  ## the setting os the "vector_type = libri and model_type = libri_tts_clean_100_fbank_xv_ssl_freeze" is the implementation of https://arxiv.org/abs/2202.13097 
+  ## the rest settings are the implementation of https://arxiv.org/abs/2203.14834
+  for vector_type in {libri,mls_10,mand_10}; do
    for model_type in {multilan_fbank_xv_ssl_freeze,libri_tts_clean_100_fbank_xv_ssl_freeze}; do
     
     for dset in {aishell3_enroll_sep,aishell3_test_sep}; do
