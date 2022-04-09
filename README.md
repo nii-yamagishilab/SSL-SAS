@@ -19,10 +19,10 @@ Please cite these papers if you use this code.
 
 `cd SSL-based-Spekaer-Anonymization`
 
-`bash install.sh`
+`bash scripts/install.sh`
 
 ## Training and Inference
-`bash 00_demo.sh`
+`bash scripts/00_demo.sh`
 
 ## Acknowledgments
 This study is supported by JST CREST Grants (JPMJCR18A6 and JPMJCR20D3), MEXT KAKENHI Grants (21K17775, 21H04906, 21K11951, 18H04112), and the VoicePersonal project (ANR-18-JSTS-0001)
