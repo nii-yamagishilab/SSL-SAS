@@ -10,7 +10,7 @@ The authors are Xiaoxiao Miao, Xin Wang, Erica Cooper, Junichi Yamagishi, Natali
 
 
 
-Audio samples can be found here: https://nii-yamagishilab.github.io/odyssey2022/
+Audio samples can be found here:  https://nii-yamagishilab.github.io/SAS-audio-samples/
 
 Please cite these papers if you use this code.
 
