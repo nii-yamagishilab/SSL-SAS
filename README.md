@@ -45,7 +45,7 @@ If not:
      2. Generate anonymized speech: `bash scripts/engl_scripts/01_demo.sh`.
      3. Following the [VoicePrivacy2020 Challenge](https://github.com/Voice-Privacy-Challenge/Voice-Privacy-Challenge-2020) to compute the performance.
  
-- Train a HiFi-GAN using [LibriTTS-100h](https://www.openslr.org/60/) on your own: `bash scripts/02_train.sh`
+- Train a HiFi-GAN using [LibriTTS-100h](https://www.openslr.org/60/) on your own: `bash scripts/engl_scripts/02_train.sh`
 
 ## Mandarin anonymization
 Mandarin models and speaker vectors are available for internal academic and research use only. If users would like to reproduce Mandarin anonymization experiments, please contact xiaoxiaomiao@nii.ac.jp. 
