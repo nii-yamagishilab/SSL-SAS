@@ -41,10 +41,11 @@ If not:
 
 - Try pre-trained model
 
-     1. Download English development and evaluation data provided by [VoicePrivacy2020 Challenge](https://github.com/Voice-Privacy-Challenge/Voice-Privacy-Challenge-2020): [VCTK](https://datashare.ed.ac.uk/handle/10283/3443)-subsets (vctk_dev and vctk_test) and [LibriSpeech](http://www.openslr.org/12/)-subsets (libri_dev and libri_test). Just run `bash adapted_from_vpc/00_download_testdata.sh`. The user will be requested the password, please contact [VoicePrivacy2020 Challenge organizers](https://github.com/Voice-Privacy-Challenge/Voice-Privacy-Challenge-2020).
-     2. Generate anonymized speech: `bash scripts/engl_scripts/01_demo.sh`
+     1. Download English development and evaluation data provided by the [VoicePrivacy2020 Challenge](https://github.com/Voice-Privacy-Challenge/Voice-Privacy-Challenge-2020): [VCTK](https://datashare.ed.ac.uk/handle/10283/3443)-subsets (vctk_dev and vctk_test) and [LibriSpeech](http://www.openslr.org/12/)-subsets (libri_dev and libri_test). Just run `bash adapted_from_vpc/00_download_testdata.sh`. The user will be requested the password, please contact [VoicePrivacy2020 Challenge organizers](https://github.com/Voice-Privacy-Challenge/Voice-Privacy-Challenge-2020).
+     2. Generate anonymized speech: `bash scripts/engl_scripts/01_demo.sh`.
+     3. Following the [VoicePrivacy2020 Challenge](https://github.com/Voice-Privacy-Challenge/Voice-Privacy-Challenge-2020) to compute the performance.
  
-- Train HiFi-GAN using [LibriTTS-100h](https://www.openslr.org/60/): `bash scripts/02_train.sh`
+- Train a HiFi-GAN using [LibriTTS-100h](https://www.openslr.org/60/) on your own: `bash scripts/02_train.sh`
 
 ## Mandarin anonymization
 Mandarin models and speaker vectors are available for internal academic and research use only. If users would like to reproduce Mandarin anonymization experiments, please contact xiaoxiaomiao@nii.ac.jp. 
