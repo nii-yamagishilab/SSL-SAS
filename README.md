@@ -31,11 +31,23 @@ If not:
 
 `conda install -c conda-forge parallel`
 
-## Training and Inference
+## 
 
-`bash scripts/00_prepare.sh`
 
-`bash scripts/01_demo.sh`
+
+
+
+## English anonymization
+
+- Try pre-trained model
+
+     1. Download English development and evaluation data provided by [VoicePrivacy2020 Challenge](https://github.com/Voice-Privacy-Challenge/Voice-Privacy-Challenge-2020): [VCTK](https://datashare.ed.ac.uk/handle/10283/3443)-subsets (vctk_dev and vctk_test) and [LibriSpeech](http://www.openslr.org/12/)-subsets (libri_dev and libri_test). Just run `bash adapted_from_vpc/00_download_testdata.sh`. The user will be requested the password, please contact [VoicePrivacy2020 Challenge organizers](https://github.com/Voice-Privacy-Challenge/Voice-Privacy-Challenge-2020).
+     2. Generate anonymized speech: `bash scripts/engl_scripts/01_demo.sh`
+ 
+- Train HiFi-GAN using [LibriTTS-100h](https://www.openslr.org/60/): `bash scripts/02_train.sh`
+
+## Mandarin anonymization
+Mandarin models and speaker vectors are available for internal academic and research use only. If users would like to reproduce Mandarin anonymization experiments, please contact xiaoxiaomiao@nii.ac.jp. 
 
 ## Acknowledgments
 This study is supported by JST CREST Grants (JPMJCR18A6 and JPMJCR20D3), MEXT KAKENHI Grants (21K17775, 21H04906, 21K11951, 18H04112), and the VoicePersonal project (ANR-18-JSTS-0001)
