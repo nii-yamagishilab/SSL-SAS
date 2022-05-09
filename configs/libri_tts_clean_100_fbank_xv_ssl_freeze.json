@@ -1,9 +1,9 @@
 {
     "input_training_file": "scp/libri/train.lst",
     "input_validation_file": "scp/libri/dev.lst",
-    "soft_model_path": "pretrained_models/soft_model.pt",
-    "hubert_model_path": "pretrained_models/hubert_base_ls960.pt",
-    "ecapa_fbank_model_path": "pretrained_models/embedding_model.ckpt",
+    "soft_model_path": "pretrained_models_anon_xv/HuBERT_soft/soft_model.pt",
+    "hubert_model_path": "pretrained_models_anon_xv/hubert_base_ls960.pt",
+    "ecapa_fbank_model_path": "pretrained_models_anon_xv/ECAPA-TDNN/embedding_model.ckpt",
     "ssl_freeze": true,
     "xv_freeze": true,
     "model_in_dim": 393,
