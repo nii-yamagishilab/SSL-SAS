@@ -16,7 +16,7 @@ if [ ! -e "pretrained_models_anon_xv/" ]; then
     fi
     echo -e "${RED}Downloading pre-trained model${NC}"
 
-    #wget https://zenodo.org/record/6369772/files/pretrained_models.tar.gz
+    wget https://zenodo.org/record/6529898/files/pretrained_models_anon_xv.tar.gz
     tar -xzvf pretrained_models_anon_xv.tar.gz
     cd pretrained_models_anon_xv/
     wget https://dl.fbaipublicfiles.com/hubert/hubert_base_ls960.pt
