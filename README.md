@@ -1,9 +1,11 @@
 ## Language independent SSL-based Speaker Anonymization system
 This is an implementation of the papers:
 
-[Language-independent speaker anonymization approach using self-supervised pre-trained models](https://arxiv.org/abs/2202.13097) 
+(1) [Language-independent speaker anonymization approach using self-supervised pre-trained models](https://arxiv.org/abs/2202.13097) 
 
-[Analyzing Language-Independent Speaker Anonymization Framework under Unseen Conditions](https://arxiv.org/abs/2203.14834) 
+(2) [Analyzing Language-Independent Speaker Anonymization Framework under Unseen Conditions](https://arxiv.org/abs/2203.14834) 
+
+(3) Journal paper (Coming soon) 
 
 The authors are Xiaoxiao Miao, Xin Wang, Erica Cooper, Junichi Yamagishi, Natalia Tomashenko.
 
