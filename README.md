@@ -7,8 +7,6 @@ This is an implementation of the papers:
 
 (2) [Analyzing Language-Independent Speaker Anonymization Framework under Unseen Conditions](https://arxiv.org/abs/2203.14834) 
 
-(3) [Language-independent speaker anonymization using orthogonal Householder neural network](https://arxiv.org/abs/2305.18823)
-
 The authors are Xiaoxiao Miao, Xin Wang, Erica Cooper, Junichi Yamagishi, Natalia Tomashenko.
 
 
