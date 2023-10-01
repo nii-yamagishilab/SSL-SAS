@@ -23,13 +23,28 @@ if [ ! -e "pretrained_models_anon_xv/" ]; then
     cd $home
 fi
 
-xv_dir=pretrained_models_anon_xv/anon_spk_vector
-#xv_dir=selec_anon/output_anon_spk_vector
+#xv_flag=extract # extract or provide
+xv_flag=provide
+extract_config=configs/extract_ecapa_f_ecapa_vox.yaml
+
+
 # try pre-trained model
 if [ -e "data/libri_dev/" ];then
    echo -e "${RED}Try pre-trained model${NC}"
    #for model_type in {multilan_fbank_xv_ssl_freeze,libri_tts_clean_100_fbank_xv_ssl_freeze}; do
    model_type=libri_tts_clean_100_fbank_xv_ssl_freeze   
+   if [[ ${xv_flag} == "extract" ]]; then
+	 echo "extract original spk vectors for pool and testsets using selection-based anonymizer"
+	 # compute ori speaker vector for libriTTS-500 (pool) and evaluation sets (libri+vctk)
+	 bash selec_anon/compute_ori_spk_vector/00_extract_emb_fbank.sh ${extract_config}
+	 # use selection-based anonymizer generate anonymized speaker vectors
+	 # https://ieeexplore.ieee.org/abstract/document/9829284
+	 bash selec_anon/compute_anon_spk_vector/01_run.sh
+	 xv_dir=selec_anon/output_anon_spk_vector
+   elif [[ ${xv_flag} == 'provide' ]]; then
+         xv_dir=pretrained_models_anon_xv/anon_spk_vector/
+   fi
+
    for dset in  libri_dev_{enrolls,trials_f,trials_m} \
 	        vctk_dev_{enrolls,trials_f_all,trials_m_all} \
 		libri_test_{enrolls,trials_f,trials_m} \

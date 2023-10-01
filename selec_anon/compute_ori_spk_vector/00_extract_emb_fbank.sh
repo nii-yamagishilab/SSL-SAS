@@ -14,8 +14,7 @@ echo ${config}
 source_dir=data
 outdir=selec_anon/output_ori_spk_vector
 anon_pool="libritts_train_other_500"
-#python selec_anon/compute_ori_spk_vector/extract_emb.py ${config} $source_dir/$anon_pool/wav.scp $outdir/$anon_pool fbank
-
+python selec_anon/compute_ori_spk_vector/extract_emb.py ${config} $source_dir/$anon_pool/wav.scp $outdir/$anon_pool fbank
 
 ## extract vpc eval
 for dset in libri_dev_{enrolls,trials_f,trials_m} \
