@@ -109,7 +109,7 @@ if __name__ == "__main__":
                 wav_name = wav_info.strip().split('/')[-1].split('.')[0]
                 
             wav, fs = torchaudio.load(wav_path)
-            #wav  = torchaudio.transforms.Resample(fs, 16000)(wav) # Paper didn't use this
+            wav  = torchaudio.transforms.Resample(fs, 16000)(wav) # Paper didn't use this
 
             # Manage single waveforms in input
             if len(wav.shape) == 1:
