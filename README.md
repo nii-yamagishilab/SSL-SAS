@@ -50,7 +50,7 @@ If not:
 - Train a HiFi-GAN using [LibriTTS-100h](https://www.openslr.org/60/) on your own: `bash scripts/engl_scripts/02_train.sh`
 
 ## Mandarin anonymization
-Mandarin models and speaker vectors are available for internal academic and research use only. If users would like to reproduce Mandarin anonymization experiments, please contact xiaoxiaomiao@nii.ac.jp. 
+Mandarin speaker vectors are available for internal academic and research use only. If users would like to reproduce Mandarin anonymization experiments, please contact ~~xiaoxiaomiao@nii.ac.jp~~ xiaoxiao.miao@singaporetech.edu.sg. 
 
 ## Acknowledgments
 This study is supported by JST CREST Grants (JPMJCR18A6 and JPMJCR20D3), MEXT KAKENHI Grants (21K17775, 21H04906, 21K11951, 18H04112), and the VoicePersonal project (ANR-18-JSTS-0001)
