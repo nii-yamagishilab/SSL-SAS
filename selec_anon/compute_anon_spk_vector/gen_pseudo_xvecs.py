@@ -153,7 +153,9 @@ def main(args):
     pseudo_spk_map = {}
     
     for spk, gender in src_spk2gender.items():
+        gender = gener.upper()
         print(spk,gender)
+        
         # get the top_K
         top_spk, gender = get_top_K(spk, affinity_scores_dir, gender,
                                     pool_spk2gender, cross_gender, proximity)
