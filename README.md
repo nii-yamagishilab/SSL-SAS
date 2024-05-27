@@ -77,3 +77,35 @@ ModuleNotFoundError: No module named 'torch.autograd.profiler_util'`
 NameError: name 'EventList' is not defined `
 
 Open */speechbrain/utils/profiling.py and comment out the function that causes the error.
+
+
+## Instructions for aonymization for your own dataset
+
+1. **Prepare the Kaldi Format Data Structure:**
+   Create a data structure in Kaldi format, such as `test`, which includes the following files:
+   - `test/wav.scp`
+   - `test/spk2gender`
+   - `test/spk2utt`
+   - `test/utt2spk`
+
+   Refer to the following GitHub repository for an example:
+   [data/libri_dev_enrolls](https://github.com/nii-yamagishilab/SSL-SAS/tree/main/data/libri_dev_enrolls)
+
+2. **Generate Original Speaker Vectors:**
+   Save the original speaker vectors to the directory `selec_anon/output_ori_spk_vector/`. Use the following script:
+   [00_extract_emb_fbank.sh](https://github.com/nii-yamagishilab/SSL-SAS/blob/main/selec_anon/compute_ori_spk_vector/00_extract_emb_fbank.sh#L31)
+
+3. **Generate Pseudo Speaker Vectors:**
+   Use the script [01_run.sh](https://github.com/nii-yamagishilab/SSL-SAS/blob/main/selec_anon/compute_anon_spk_vector/01_run.sh) to generate pseudo speaker vectors. This script will read all datasets under `selec_anon/output_ori_spk_vector/` by default, treat `libritts500` as the external pool, and compute pseudo vectors for other datasets sequentially.
+
+   Note the default configurations of the script, which you can modify as needed:
+   - [`rand_level="spk"`](https://github.com/nii-yamagishilab/SSL-SAS/blob/main/selec_anon/compute_anon_spk_vector/01_run.sh#L16): If the utterances come from the same speaker, they will share the same pseudo vector. Set as`rand_level="utt"` where each utterance is anonymized individually without any association.
+   - [`cross_gender="false"`](https://github.com/nii-yamagishilab/SSL-SAS/blob/main/selec_anon/compute_anon_spk_vector/01_run.sh#L17): The anonymized speech and original speech will be of the same gender. Set as `cross_gender="true"`: The anonymized speech and original speech will be of different genders.
+   - The script calculates the similarity between the original speaker vector and the pool speaker vectors, then selects the `WORLDS=200` most dissimilar vectors of the same gender from the pool. From these, `REGION=100` vectors are randomly chosen and averaged to create the anonymized speaker vector. Modify [gen_pseudo_xvecs.py](https://github.com/nii-yamagishilab/SSL-SAS/blob/main/selec_anon/compute_anon_spk_vector/gen_pseudo_xvecs.py#L18-L19) as you needed.
+  
+
+4. **Modify Input List and `xv_dir` to Generate Anonymized Speech:**
+   Update the input list and `xv_dir` to generate anonymized speech by modifying the following lines in the script:
+   [01_demo.sh](https://github.com/nii-yamagishilab/SSL-SAS/blob/main/scripts/engl_scripts/01_demo.sh#L50-L51)
+
+That's all and good luck!
