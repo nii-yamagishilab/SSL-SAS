@@ -23,8 +23,8 @@ if [ ! -e "pretrained_models_anon_xv/" ]; then
     cd $home
 fi
 
-xv_flag=extract # extract or provide
-#xv_flag=provide
+#xv_flag=extract # extract or provide
+xv_flag=provide
 extract_config=configs/extract_ecapa_f_ecapa_vox.yaml
 
 
