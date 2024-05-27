@@ -14,5 +14,5 @@ ffmpeg
 tqdm
 pandas
 numba==0.53
-speechbrain
+speechbrain==0.5.12
 fairseq@git+https://github.com//pytorch/fairseq.git@f2146bdc7abf293186de9449bfa2272775e39e1d#egg=fairseq
