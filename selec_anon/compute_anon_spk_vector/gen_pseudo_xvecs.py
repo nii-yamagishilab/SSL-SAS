@@ -153,7 +153,7 @@ def main(args):
     pseudo_spk_map = {}
     
     for spk, gender in src_spk2gender.items():
-        gender = gener.upper()
+        gender = gender.upper()
         print(spk,gender)
         
         # get the top_K

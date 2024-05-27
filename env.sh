@@ -1,1 +1,0 @@
-if [ $(which python) != /home/smg/miao/provided/japa_company_2022_provide_to_nhk/NHK-SAS/venv/bin/python ]; then source /home/smg/miao/provided/japa_company_2022_provide_to_nhk/NHK-SAS/venv/bin/activate; fi

@@ -23,8 +23,8 @@ if [ ! -e "pretrained_models_anon_xv/" ]; then
     cd $home
 fi
 
-#xv_flag=extract # extract or provide
-xv_flag=provide
+xv_flag=extract # extract or provide
+#xv_flag=provide
 extract_config=configs/extract_ecapa_f_ecapa_vox.yaml
 
 
@@ -46,13 +46,11 @@ if [ -e "data/libri_dev/" ];then
    fi
 
    for dset in  libri_dev_{enrolls,trials_f,trials_m} \
-	        vctk_dev_{enrolls,trials_f_all,trials_m_all} \
-		libri_test_{enrolls,trials_f,trials_m} \
-		vctk_test_{enrolls,trials_f_all,trials_m_all}; do
+		libri_test_{enrolls,trials_f,trials_m}; do
         python adapted_from_facebookresearch/inference.py --input_test_file scp/vpc/$dset.lst \
 		    --xv_dir $xv_dir/$dset/pseudo_xvectors/xvectors \
 		    --checkpoint_file pretrained_models_anon_xv/HiFi-GAN/$model_type \
-		    --output_dir pretrained_models_anon_xv/output/$model_type/${dset}
+		    --output_dir output/$model_type/${dset}
    done
    echo -e "${RED}Please check generated waveforms from pre-trained model in ./pretrained_models/output"
     
