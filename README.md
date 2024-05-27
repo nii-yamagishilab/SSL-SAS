@@ -88,7 +88,7 @@ Open */speechbrain/utils/profiling.py and comment out the function that causes t
    - `test/spk2utt`
    - `test/utt2spk`
 
-   Refer to the following GitHub repository for an example:
+   For example:
    [data/libri_dev_enrolls](https://github.com/nii-yamagishilab/SSL-SAS/tree/main/data/libri_dev_enrolls)
 
 2. **Generate Original Speaker Vectors:**
