@@ -67,5 +67,13 @@ All rights reserved.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+## Some potential questions you may have and how to solve them:
+`File "/home/ubuntu/miao/SSL-SAS/venv/lib/python3.8/site-packages/speechbrain/utils/profiling.py", line 11, in <module>
+    from torch.autograd.profiler_util import (  # pytorch v1.10.1
+ModuleNotFoundError: No module named 'torch.autograd.profiler_util'`
 
+`File "/home/ubuntu/miao/SSL-SAS/venv/lib/python3.8/site-packages/speechbrain/utils/profiling.py", line 527, in <module>
+    a: EventList, b: EventList, filter_by: str = "count",
+NameError: name 'EventList' is not defined `
 
+Open */speechbrain/utils/profiling.py and comment out the function that causes the error.
