@@ -35,6 +35,6 @@ with ReadHelper('scp:'+src_xvec_file) as reader:
                 # Multiplying by -1 to ensure compatibility with affinity
                 # Now lower value will indicate less affinity as compared
                 # to original cosine distance
-                dist = -1.0 * distance.cosine(sxvec, pxvec)
+                dist = -1.0 * distance.cosine(sxvec.squeeze(), pxvec.squeeze())
                 sf.write(sspk + ' ' + pspk + ' ' + str(dist) + '\n')
 
