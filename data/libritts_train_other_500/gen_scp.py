@@ -1,5 +1,20 @@
 import sys,os
 #/Database/LibriTTS/train-other-500/1006/135212/1006_135212_000001_000005.wav
+
+dataset_dir = "/root/data/LibriTTS/train-other-500/"
+output_file = "wav.lst"
+
+# Collect all .wav file paths
+wav_files = []
+for root, _, files in os.walk(dataset_dir):
+    for file in files:
+        if file.endswith(".wav"):
+            wav_files.append(os.path.join(root, file))
+# Write to wav.lst
+with open(output_file, "w") as f:
+    for wav in wav_files:
+        f.write(wav + "\n")
+
 fp = open('wav.scp','w')
 fp_utt2spk = open('utt2spk', 'w')
 spk2utt={}
@@ -36,6 +51,3 @@ for spk in spk2utt:
         line.append(uu)
     fp_spk2utt.write('%s\n'%' '.join(line))
 fp_spk2utt.close()
-
-    
-
